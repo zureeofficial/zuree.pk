@@ -1,18 +1,19 @@
-/* --- Global Styles & Variables (New Professional Look) --- */
+/* --- Global Styles & Variables (Dark Mode Professional) --- */
 :root {
-    --primary-brand-color: #B5EAD7; /* Soft Mint Green - Playful & Calm */
-    --secondary-accent-color: #FFC3A0; /* Soft Peach - Warm & Inviting */
-    --text-dark: #333;
-    --text-light: #f8f8f8; /* Off-white for light backgrounds */
-    --bg-page: #fdfdfd; /* Very light, almost white background */
-    --bg-header-footer: #FFFFFF; /* Pure white for header/footer contrast */
-    --border-light: #eee;
-    --shadow-light: rgba(0, 0, 0, 0.05);
+    --primary-brand-color: #87CEFA; /* Light Sky Blue Accent */
+    --secondary-accent-color: #FFFFFF; /* Pure White */
+    --text-dark: #FFFFFF; /* All text is white */
+    --text-light: #111111; /* Used for hover states/inverted elements */
+    --bg-page: #1a1a1a; /* Dark background */
+    --bg-container: #282828; /* Slightly lighter black for cards/sections */
+    --bg-header-footer: #111111; /* Very dark black for header/footer */
+    --border-dark: #333333; /* Dark border lines */
+    --shadow-dark: rgba(255, 255, 255, 0.08);
     --font-primary: 'Poppins', sans-serif;
-    --font-heading: 'Nunito Sans', sans-serif; /* A bit rounder, friendly for baby brand */
+    --font-heading: 'Nunito Sans', sans-serif; 
 }
 
-/* Import Google Fonts - Poppins (for body) and Nunito Sans (for headings) */
+/* Import Google Fonts - Poppins and Nunito Sans */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 
@@ -35,7 +36,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px; /* Add some horizontal padding for smaller screens */
+    padding: 0 15px;
 }
 
 a {
@@ -48,26 +49,26 @@ a:hover {
     color: var(--secondary-accent-color);
 }
 
-/* --- Header Styling (Modern & Clean) --- */
+/* --- Header Styling --- */
 header {
     background-color: var(--bg-header-footer);
     padding: 20px 0;
-    box-shadow: 0 2px 5px var(--shadow-light);
-    border-bottom: 1px solid var(--border-light);
+    box-shadow: 0 2px 5px var(--shadow-dark);
+    border-bottom: 1px solid var(--border-dark);
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    flex-wrap: wrap;
 }
 
 .logo {
     font-family: var(--font-heading);
     font-size: 2.2rem;
     font-weight: 700;
-    color: var(--primary-brand-color);
+    color: var(--secondary-accent-color); /* White logo on black header */
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 5px 0;
@@ -76,7 +77,7 @@ header .container {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* Space out navigation items */
+    gap: 30px;
 }
 
 nav ul li a {
@@ -87,12 +88,12 @@ nav ul li a {
     position: relative;
 }
 
-nav ul li a::after { /* Underline effect */
+nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
-    background: var(--secondary-accent-color);
+    background: var(--primary-brand-color);
     left: 0;
     bottom: -3px;
     transition: width 0.3s ease;
@@ -109,7 +110,7 @@ nav ul li a.active {
 
 /* --- Hero Section Styling (Homepage) --- */
 .hero-section {
-    background-color: var(--secondary-accent-color); /* Use accent color for hero background */
+    background-color: var(--bg-container); /* Dark background for hero */
     padding: 80px 0;
     text-align: center;
     min-height: 60vh;
@@ -125,7 +126,7 @@ nav ul li a.active {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: var(--text-dark); /* Keep text dark for contrast */
+    color: var(--primary-brand-color); 
 }
 
 .hero-section p {
@@ -133,26 +134,26 @@ nav ul li a.active {
     max-width: 700px;
     margin-bottom: 40px;
     line-height: 1.5;
-    color: #555;
+    color: #ccc; /* Lighter white for body text */
 }
 
 .cta-button {
     display: inline-block;
     background-color: var(--primary-brand-color);
-    color: var(--text-light);
+    color: var(--text-light); /* Dark text on bright button */
     padding: 15px 35px;
-    border-radius: 50px; /* Pill shape for friendly look */
+    border-radius: 50px;
     font-weight: 600;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px var(--shadow-dark);
     transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #9cdbd2; /* Lighter tint on hover */
+    background-color: #6a9acb; /* Slightly darker blue on hover */
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
 }
 
 /* --- Shop Page Styles (Grid & Sidebar) --- */
@@ -167,12 +168,13 @@ nav ul li a.active {
 }
 
 .sidebar {
-    flex: 0 0 280px; /* Slightly wider sidebar */
+    flex: 0 0 280px;
     padding: 25px;
-    background-color: var(--bg-header-footer);
+    background-color: var(--bg-container); 
     border-radius: 10px;
-    box-shadow: 0 4px 15px var(--shadow-light);
+    box-shadow: 0 4px 15px var(--shadow-dark);
     height: fit-content;
+    border: 1px solid var(--border-dark);
 }
 
 .sidebar h3 {
@@ -180,331 +182,153 @@ nav ul li a.active {
     font-size: 1.8rem;
     color: var(--primary-brand-color);
     margin-bottom: 25px;
-    border-bottom: 2px solid var(--border-light);
+    border-bottom: 2px solid var(--border-dark);
     padding-bottom: 15px;
     font-weight: 700;
 }
 
-.filter-group {
-    margin-bottom: 35px;
-}
-
 .filter-group h4 {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 15px;
     color: var(--text-dark);
 }
 
-.filter-group ul {
-    list-style: none;
-    padding-left: 10px; /* Indent filter options slightly */
-}
-
 .filter-group li a {
-    color: #666;
-    display: block;
-    padding: 8px 0;
-    font-size: 1.05rem;
-    transition: color 0.2s ease, transform 0.2s ease;
+    color: #aaa; 
 }
 
 .filter-group li a:hover {
-    color: var(--secondary-accent-color);
-    transform: translateX(5px);
-}
-
-.products-section {
-    flex-grow: 1;
+    color: var(--primary-brand-color);
 }
 
 .products-section h2 {
     font-family: var(--font-heading);
-    font-size: 3rem;
-    color: var(--primary-brand-color);
-    margin-bottom: 40px;
-    font-weight: 700;
-    text-align: left; /* Align with content */
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Larger cards */
-    gap: 30px;
+    color: var(--secondary-accent-color);
 }
 
 .product-card {
-    background-color: var(--bg-header-footer);
-    border: 1px solid var(--border-light);
-    border-radius: 12px; /* More rounded corners */
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 5px 15px var(--shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Ensures image corners are within card radius */
+    background-color: var(--bg-container);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 5px 15px var(--shadow-dark);
 }
 
 .product-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
 }
 
 .product-image-placeholder {
-    width: 100%;
-    height: 250px; /* Taller image placeholder */
-    background-color: #f0fdf9; /* Very light mint for placeholder */
-    border-radius: 8px; /* Slightly less rounded than card */
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    font-size: 1rem;
-    color: #ccc; /* Lighter text for placeholder */
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    background-color: #333; 
+    color: #666;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .product-image-placeholder::after {
-    content: "Product Photo Here";
-    color: #a0a0a0;
+    color: #999;
 }
 
 .product-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.4rem;
-    margin-bottom: 10px;
     color: var(--text-dark);
-    font-weight: 700;
 }
 
 .price {
-    font-size: 1.25rem;
-    font-weight: 700;
     color: var(--primary-brand-color);
-    margin-bottom: 20px;
 }
 
 .add-to-cart {
-    display: inline-block;
-    background-color: var(--secondary-accent-color);
-    color: var(--text-dark);
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: var(--primary-brand-color);
+    color: var(--text-light); /* Dark text on bright button */
 }
 
 .add-to-cart:hover {
-    background-color: #ffb58e; /* Darker peach on hover */
-    transform: translateY(-1px);
+    background-color: #6a9acb; 
 }
 
-/* --- About Page Styles --- */
-.about-content {
-    padding: 60px 0 80px;
-    min-height: 80vh;
-}
-
-.about-content h2 {
-    font-family: var(--font-heading);
-    text-align: center;
-    font-size: 3.2rem;
+/* --- About & Contact Page Overrides --- */
+.about-content h2, .contact-content h2 {
     color: var(--primary-brand-color);
-    margin-bottom: 40px;
-    font-weight: 700;
 }
 
 .intro-text {
-    font-size: 1.2rem;
-    text-align: center;
-    max-width: 850px;
-    margin: 0 auto 60px;
-    line-height: 1.7;
-    color: #555;
-}
-
-.about-flex {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 60px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    justify-content: center;
+    color: #ccc;
 }
 
 .about-text-block {
-    flex: 1;
-    min-width: 300px; /* Ensure blocks don't get too small */
-    background-color: var(--bg-header-footer);
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px var(--shadow-light);
-    border: 1px solid var(--border-light);
+    background-color: var(--bg-container);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 5px 15px var(--shadow-dark);
 }
 
 .about-text-block h3 {
-    font-family: var(--font-heading);
-    color: var(--text-dark);
-    font-size: 1.8rem;
-    margin-bottom: 18px;
+    color: var(--secondary-accent-color);
     border-bottom: 2px solid var(--primary-brand-color);
-    padding-bottom: 10px;
-    font-weight: 700;
 }
 
 .about-text-block p {
-    color: #555;
-    line-height: 1.7;
-    font-size: 1.05rem;
+    color: #aaa;
 }
 
 .cta-section {
-    text-align: center;
-    padding: 40px;
-    background-color: #f7fff7; /* Very light, subtle background */
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
-    border: 1px solid var(--border-light);
+    background-color: #333333;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-dark);
 }
 
 .cta-section p {
-    font-size: 1.4rem;
-    margin-bottom: 25px;
-    font-weight: 600;
-    color: var(--text-dark);
+    color: var(--secondary-accent-color);
 }
 
-/* --- Contact Page Styles --- */
-.contact-content {
-    padding: 60px 0 80px;
-    min-height: 80vh;
-}
-
-.contact-content h2 {
-    font-family: var(--font-heading);
-    text-align: center;
-    font-size: 3.2rem;
-    color: var(--primary-brand-color);
-    margin-bottom: 40px;
-    font-weight: 700;
-}
-
-.contact-info {
-    max-width: 700px;
-    margin: 0 auto 50px;
-    background-color: var(--bg-header-footer);
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px var(--shadow-light);
-    border: 1px solid var(--border-light);
+.contact-info, .contact-form {
+    background-color: var(--bg-container);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 5px 15px var(--shadow-dark);
 }
 
 .contact-info p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    color: #555;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Optional: Add icons if you include a font-awesome type library */
-.contact-info p i {
-    color: var(--primary-brand-color);
-    font-size: 1.2rem;
-}
-
-.contact-form {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: var(--bg-header-footer);
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px var(--shadow-light);
-    border: 1px solid var(--border-light);
+    color: #aaa;
 }
 
 .contact-form h3 {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    color: var(--text-dark);
-    margin-bottom: 25px;
-    text-align: center;
-    font-weight: 700;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    text-align: left; /* Align labels */
+    color: var(--secondary-accent-color);
 }
 
 .form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #444;
+    color: var(--secondary-accent-color);
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--border-light);
-    border-radius: 8px;
-    font-family: var(--font-primary);
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+    background-color: #333;
+    border: 1px solid var(--border-dark);
+    color: var(--text-dark);
 }
 
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus,
 .form-group textarea:focus {
     border-color: var(--primary-brand-color);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(181, 234, 215, 0.5); /* Soft focus ring */
-}
-
-.form-group textarea {
-    min-height: 120px;
-    resize: vertical;
+    box-shadow: 0 0 0 3px rgba(135, 206, 250, 0.4);
 }
 
 .submit-button {
-    display: block; /* Make it full width if desired, or keep as inline-block */
-    width: 100%; /* Full width submit button */
-    padding: 15px;
     background-color: var(--primary-brand-color);
     color: var(--text-light);
-    border: none;
-    border-radius: 50px;
-    font-size: 1.15rem;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
 }
 
 .submit-button:hover {
-    background-color: #9cdbd2;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #6a9acb;
 }
 
 
 /* --- Footer Styling --- */
 footer {
     background-color: var(--bg-header-footer);
-    color: #666; /* Softer text color for footer */
-    text-align: center;
-    padding: 25px 0;
-    margin-top: 60px; /* More space above footer */
-    box-shadow: 0 -2px 5px var(--shadow-light);
-    font-size: 0.95rem;
+    color: #999;
+    box-shadow: 0 -2px 5px var(--shadow-dark);
 }
 
-/* --- Responsive Adjustments --- */
+
+/* --- Responsive Adjustments (Kept from previous version) --- */
 @media (max-width: 992px) {
     .shop-layout {
         flex-direction: column;
@@ -513,7 +337,7 @@ footer {
     .sidebar {
         flex: auto;
         width: 100%;
-        max-width: none; /* Remove max-width for full width */
+        max-width: none;
     }
     .products-section h2 {
         text-align: center;
@@ -524,7 +348,7 @@ footer {
         gap: 30px;
     }
     .about-text-block {
-        min-width: unset; /* Remove min-width on small screens */
+        min-width: unset;
     }
     .about-content h2, .contact-content h2 {
         font-size: 2.5rem;
@@ -543,7 +367,7 @@ footer {
         flex-direction: column;
         gap: 10px;
         padding-top: 10px;
-        border-top: 1px solid var(--border-light);
+        border-top: 1px solid var(--border-dark);
     }
     .hero-section h2 {
         font-size: 2.5rem;
@@ -552,7 +376,7 @@ footer {
         font-size: 1.1rem;
     }
     .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Smaller cards on tiny screens */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 20px;
     }
     .about-content h2, .contact-content h2 {
