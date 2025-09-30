@@ -1,23 +1,129 @@
-/* --- NEW SHOP LAYOUT STYLES (Sidebar & Grid) --- */
+/* GLOBAL STYLES */
+:root {
+    --primary-color: #5d9cec; /* Soft Blue */
+    --secondary-color: #f0f8ff; /* Alice Blue/Off-white background */
+    --text-dark: #333;
+    --text-light: #fff;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--secondary-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER AND NAVIGATION */
+header {
+    background-color: var(--text-light);
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 400;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* HERO SECTION (index.html) */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70vh;
+    background: url('placeholder-bg.jpg') center/cover no-repeat;
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #4a86e6;
+}
+
+/* --- SHOP PAGE STYLES --- */
 
 .shop-content {
-    /* Removed fixed padding; use margin on elements inside */
     padding: 40px 0 80px; 
     min-height: 80vh;
 }
 
 .shop-layout {
-    display: flex; /* Enable flexible layout for sidebar and products */
+    display: flex; 
     gap: 40px;
 }
 
+/* SIDEBAR STYLES */
 .sidebar {
-    flex: 0 0 250px; /* Sidebar width fixed at 250px */
+    flex: 0 0 250px; 
     padding: 20px;
-    background-color: var(--text-light); /* White background for the sidebar */
+    background-color: var(--text-light); 
     border-radius: 8px;
-    height: fit-content; /* Only takes up as much height as its content */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    height: fit-content; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow for visibility */
 }
 
 .sidebar h3 {
@@ -56,8 +162,9 @@
     color: var(--primary-color);
 }
 
+/* PRODUCTS SECTION STYLES */
 .products-section {
-    flex-grow: 1; /* Product grid takes up the remaining space */
+    flex-grow: 1; 
 }
 
 .products-section h2 {
@@ -67,125 +174,10 @@
     color: var(--primary-color);
 }
 
-/* Product Grid Adjustments (to look better next to the sidebar) */
-.product-grid {
-    /* Adjusted to fit 3 columns nicely in the main area */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 25px;
-}
-
-/* IMAGE PLACEHOLDER FIX */
-.product-image-placeholder {
-    width: 100%;
-    height: 220px; /* Fixed height for consistent look */
-    background-color: #fce4ec; /* Soft Pink Placeholder Color */
-    border-radius: 6px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    color: var(--text-light);
-    font-size: 0.9rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.product-image-placeholder::after {
-    content: "Product Photo Here";
-    color: #a0a0a0;
-}
-
-/* Responsive adjustment for mobile view */
-@media (max-width: 992px) {
-    .shop-layout {
-        flex-direction: column; /* Stacks sidebar above products on smaller screens */
-        gap: 20px;
-    }
-    .sidebar {
-        flex: auto; /* Allow sidebar to take full width */
-        width: 100%;
-    }
-}
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fdfdfd;
-  color: #333;
-}
-
-header {
-  background: #ff4081;
-  color: white;
-  padding: 15px;
-  text-align: center;
-}
-
-header nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.hero {
-  padding: 50px;
-  text-align: center;
-  background: #ffe4ec;
-}
-
-.hero .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #ff4081;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.products .grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-}
-
-.card {
-  background: white;
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: center;
-  width: 200px;
-}
-
-.card img {
-  max-width: 100%;
-}
-
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-}/* --- SHOP PAGE STYLES --- */
-
-.shop-content {
-    padding: 40px 0 80px; /* Top, right/left, bottom padding */
-    min-height: 80vh;
-}
-
-.shop-content h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: var(--primary-color);
-    font-size: 2rem;
-}
-
 .product-grid {
     display: grid;
-    /* This creates a 4-column layout for desktop and adjusts for smaller screens */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 25px;
 }
 
 .product-card {
@@ -195,22 +187,32 @@ footer {
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.product-image {
+/* IMAGE PLACEHOLDER STYLES */
+.product-image-placeholder {
     width: 100%;
-    height: auto;
-    max-height: 250px;
-    object-fit: cover;
+    height: 220px; 
+    background-color: #fce4ec; /* Soft Pink Placeholder Color */
     border-radius: 6px;
     margin-bottom: 15px;
-    /* Placeholder for images. In a real site, you'd replace 'placeholder-itemX.jpg' with your product images */
-    background-color: #e6f0ff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-placeholder::after {
+    content: "Product Photo Here";
+    color: #a0a0a0;
 }
 
 .product-card h3 {
@@ -241,8 +243,55 @@ footer {
     background-color: #4a86e6;
 }
 
-/* Ensure the footer is positioned correctly on shorter pages */
+/* FOOTER */
 footer {
-    position: static;
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px 0;
+    /* Changed position to relative/static for multi-page content flow */
+    position: relative; 
     margin-top: 50px;
+    width: 100%;
+}
+
+
+/* RESPONSIVENESS */
+@media (max-width: 992px) {
+    /* Shop Layout Stacks on Tablets/Mobile */
+    .shop-layout {
+        flex-direction: column; 
+        gap: 20px;
+    }
+    .sidebar {
+        flex: auto; 
+        width: 100%;
+    }
+    .products-section h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header Stacks on Mobile */
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
 }
