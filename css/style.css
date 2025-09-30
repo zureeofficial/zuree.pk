@@ -74,6 +74,7 @@ nav ul li a:hover, nav ul li a.active {
     align-items: center;
     text-align: center;
     height: 70vh;
+    /* You need to add a file named 'placeholder-bg.jpg' for this background to work */
     background: url('placeholder-bg.jpg') center/cover no-repeat;
 }
 
@@ -123,7 +124,7 @@ nav ul li a:hover, nav ul li a.active {
     background-color: var(--text-light); 
     border-radius: 8px;
     height: fit-content; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow for visibility */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .sidebar h3 {
@@ -249,7 +250,6 @@ footer {
     color: var(--text-light);
     text-align: center;
     padding: 20px 0;
-    /* Changed position to relative/static for multi-page content flow */
     position: relative; 
     margin-top: 50px;
     width: 100%;
