@@ -67,15 +67,14 @@ nav ul li a:hover, nav ul li a.active {
     border-bottom: 2px solid var(--primary-color);
 }
 
-/* HERO SECTION (index.html) */
-.hero-section {
+/* HERO SECTION (index.html) */.hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 70vh;
-    /* You need to add a file named 'placeholder-bg.jpg' for this background to work */
-    background: url('placeholder-bg.jpg') center/cover no-repeat;
+    background-color: #e6f7ff; /* A very light, soft blue */
+}
 }
 
 .hero-section h2 {
