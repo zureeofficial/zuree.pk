@@ -4,14 +4,14 @@
 :root {
     --primary-brand-color: #C51162; /* Deep Rose Pink - Core Brand Color */
     --secondary-accent-color: #D4AF37; /* Soft Gold/Mustard - Luxury Accent */
-    --text-dark: #333333;
-    --text-light: #FFFFFF;
+    --text-dark: #333333; /* Dark Gray for main text */
+    --text-light: #FFFFFF; /* White for inverse text */
     --bg-page: #FDFDFD; /* Near-pure White background */
-    --bg-header-footer: #FFFFFF; 
-    --border-light: #EEEEEE; 
-    --shadow-light: rgba(0, 0, 0, 0.08); 
+    --bg-header-footer: #FFFFFF; /* Pure White for header/footer */
+    --border-light: #EEEEEE; /* Very light gray border */
+    --shadow-light: rgba(0, 0, 0, 0.08); /* Soft, subtle shadow */
     --font-primary: 'Poppins', sans-serif;
-    --font-heading: 'Lora', serif;
+    --font-heading: 'Lora', serif; /* Elegant serif for headings */
 }
 
 * {
@@ -139,7 +139,6 @@ nav ul li a.active {
 
 .cta-button:hover {
     background-color: #A0114F; 
-    box-shadow: 0 8px 20px rgba(197, 17, 98, 0.3);
     transform: translateY(-2px);
 }
 
@@ -257,7 +256,42 @@ nav ul li a.active {
     text-align: left;
 }
 
-/* ... rest of the contact styles for form groups and buttons are in the original code from step 1 ... */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: var(--text-dark);
+}
+
+.submit-button {
+    background-color: var(--primary-brand-color);
+    color: var(--text-light);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #A0114F;
+}
 
 /* --- Footer Styling --- */
 footer {
@@ -287,7 +321,13 @@ footer {
     .hero-section h2 {
         font-size: 2.8rem;
     }
-    .product-grid {
-        grid-template-columns: 1fr; 
+    .hero-section p {
+        font-size: 1.1rem;
     }
-}sssssssss
+    .product-grid {
+        grid-template-columns: 1fr; /* Stack cards on mobile */
+    }
+    .page-content h2 {
+        font-size: 2.5rem;
+    }
+}
