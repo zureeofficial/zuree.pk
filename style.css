@@ -1,4 +1,21 @@
-/* --- Zuree.pk Professional Baby Boutique Styles (Elegant Pink & Gold) --- */
+/* --- New Add to Cart Button Styling --- */
+.add-to-cart-btn {
+    background-color: var(--primary-brand-color); /* Rose Pink */
+    color: var(--text-light); /* White text */
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #A0114F; /* Darker Pink on hover */
+    transform: translateY(-1px);
+}/* --- Zuree.pk Professional Baby Boutique Styles (Elegant Pink & Gold) --- */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
