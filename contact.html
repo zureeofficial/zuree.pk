@@ -3,37 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Zuree.pk</title>
+  <title>Zuree.pk - Contact</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- Navbar -->
-  <nav>
-    <div class="logo">Zuree.pk</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Zuree.pk</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Contact Section -->
   <section class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Whether you have a question about products, orders, or anything else, our team is ready to answer all your questions.</p>
+    
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <form class="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><strong>Email:</strong> zuree1625@gmail.com</p>
+        <p><strong>Phone:</strong> +92 308 4413996</p>
+        <p><strong>Address:</strong> shahkot, Pakistan</p>
+
+        <div class="socials">
+          <h3>Follow Us</h3>
+          <a href="#">Instagram</a> |
+          <a href="#">Facebook</a> |
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Zuree.pk | Baby Clothing Brand</p>
+    <p>© 2025 Zuree.pk | All Rights Reserved</p>
   </footer>
-
 </body>
 </html>

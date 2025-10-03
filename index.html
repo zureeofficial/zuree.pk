@@ -3,55 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zuree.pk | Baby Clothing</title>
+  <title>Zuree.pk - Baby Clothing</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- Navbar -->
-  <nav>
-    <div class="logo">Zuree.pk</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Zuree.pk</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Welcome to Zuree.pk</h1>
-    <p>Soft & Stylish Baby Clothing for Every Occasion</p>
-    <a href="shop.html">Shop Now</a>
+    <div class="hero-content">
+      <h1>Soft, Stylish & Comfy Baby Wear</h1>
+      <p>Made with love and care for your little ones</p>
+      <a href="shop.html" class="btn">Shop Now</a>
+    </div>
   </section>
 
   <!-- Featured Products -->
-  <section class="products">
-    <div class="product-card">
-      <img src="images/baby1.jpg" alt="Baby Dress 1">
-      <h3>Baby Pink Dress</h3>
-      <p>Soft cotton dress for baby girls</p>
-      <p class="price">Rs. 1,200</p>
+  <section class="featured">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/baby1.jpg" alt="Baby Outfit 1">
+        <h3>Comfy Baby Romper</h3>
+        <p>PKR 1,200</p>
+      </div>
+      <div class="product-card">
+        <img src="images/baby2.jpg" alt="Baby Outfit 2">
+        <h3>Soft Cotton Set</h3>
+        <p>PKR 1,500</p>
+      </div>
+      <div class="product-card">
+        <img src="images/baby3.jpg" alt="Baby Outfit 3">
+        <h3>Adorable Hoodie</h3>
+        <p>PKR 1,800</p>
+      </div>
     </div>
-    <div class="product-card">
-      <img src="images/baby2.jpg" alt="Baby Dress 2">
-      <h3>Blue Romper</h3>
-      <p>Comfortable romper for baby boys</p>
-      <p class="price">Rs. 950</p>
-    </div>
-    <div class="product-card">
-      <img src="images/baby3.jpg" alt="Baby Dress 3">
-      <h3>Floral Frock</h3>
-      <p>Perfect for summer outings</p>
-      <p class="price">Rs. 1,500</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-list">
+      <div class="testimonial">
+        <p>“The quality is amazing, my baby loves the clothes!”</p>
+        <span>- Ayesha, Karachi</span>
+      </div>
+      <div class="testimonial">
+        <p>“Soft fabric and beautiful designs. Highly recommended!”</p>
+        <span>- Fatima, Lahore</span>
+      </div>
+      <div class="testimonial">
+        <p>“Delivery was super fast and the clothes fit perfectly.”</p>
+        <span>- Sara, Islamabad</span>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Zuree.pk | Baby Clothing Brand</p>
+    <p>© 2025 Zuree.pk | All Rights Reserved</p>
+    <div class="socials">
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">TikTok</a>
+    </div>
   </footer>
-
 </body>
 </html>
